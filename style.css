@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.side-bar{
+    width: 7%;
+    background: #010c1f;
+    height: 100vh;
+    color: #fff;
+    padding: 5px;
+
+}
+.side-bar h1{
+    background: -webkit-linear-gradient( #d9b4f2,#8dbcb6e4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 20px 0;
+}
+.stroke input{
+    width: 90%;
+   height: 30px;
+   margin:20px 0 ;
+}
+.width input{
+    width: 90%;
+    height: 40px;
+    font-size: 22px;
+    margin: 20px 0;
+}
+button{
+    width: 90%;
+    height: 30px;
+    color: #fff;
+    background-color: #c66aff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+canvas{
+    width: 100%;
+    height: 100vh;
+}
+.eraser{
+    background: white;
+    height: 20px;
+    width: 40px;
+    margin: 20px;
+    cursor: pointer;
+}
