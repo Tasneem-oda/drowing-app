@@ -1,28 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-   
-    <div class="side-bar">
-        <h1>drowing </h1>
-        <div class="stroke">
-            <h3>stroke</h3>
-            <input type="color" name="" id="stroke">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>تطبيق الرسم</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="toolbar">
+        <h1>الرسام البسيط 🎨</h1>
+        <div class="tool-group">
+          <label for="stroke">لون الخط</label>
+          <input type="color" id="stroke" value="#000000" />
         </div>
-        <div class="width">
-            <h3>line width</h3>
-            <input type="number" name="" id="line-width" min="0" max="100">
+        <div class="tool-group">
+          <label for="line-width">سمك الخط</label>
+          <input type="range" id="line-width" min="1" max="50" value="5" />
+          <span id="line-width-value">5</span>
         </div>
-        <button>clear</button>
-    </div>
-    <div class="drowing-box">
-        <canvas></canvas>
+        <div class="tool-group">
+          <label for="opacity">الشفافية</label>
+          <input
+            type="range"
+            id="opacity"
+            min="0.1"
+            max="1"
+            step="0.1"
+            value="1"
+          />
+          <span id="opacity-value">1</span>
+        </div>
+        <button id="clear-btn">مسح الكل</button>
+        <button id="eraser-btn">الممحاة</button>
+        <div class="tool-group-controls">
+          <button id="undo-btn">تراجع</button>
+          <button id="redo-btn" disabled>إعادة</button>
+        </div>
+        <button id="save-btn">حفظ الصورة</button>
+      </div>
+      <canvas id="drawing-board"></canvas>
     </div>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
